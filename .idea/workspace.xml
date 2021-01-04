@@ -2,20 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="35c283ce-8891-4ee1-81ac-c825bba4d491" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/serviceWorker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Navbar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reportWebVitals.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TicketsBoard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TicketsBoard.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -71,14 +73,38 @@
       <option name="presentableId" value="Default" />
       <updated>1609598686365</updated>
       <workItem from="1609598688121" duration="1708000" />
-      <workItem from="1609787211979" duration="244000" />
+      <workItem from="1609787211979" duration="3414000" />
     </task>
+    <task id="LOCAL-00001" summary="Tickets task start">
+      <created>1609787675059</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1609787675059</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Tickets task start" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tickets task start" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="439" y="176" key="#Deployment" timestamp="1609787639318">
+      <screen x="0" y="23" width="1680" height="976" />
+    </state>
+    <state x="439" y="176" key="#Deployment/1680.23.1920.1057/0.23.1680.976@0.23.1680.976" timestamp="1609787639318" />
+    <state x="423" y="113" key="CommitChangelistDialog2" timestamp="1609787674870">
+      <screen x="0" y="23" width="1680" height="976" />
+    </state>
+    <state x="423" y="113" key="CommitChangelistDialog2/1680.23.1920.1057/0.23.1680.976@0.23.1680.976" timestamp="1609787674870" />
+    <state x="705" y="411" key="Github.ShareDialog" timestamp="1609787838040">
+      <screen x="0" y="23" width="1680" height="976" />
+    </state>
+    <state x="705" y="411" key="Github.ShareDialog/1680.23.1920.1057/0.23.1680.976@0.23.1680.976" timestamp="1609787838040" />
     <state width="1659" height="255" key="GridCell.Tab.0.bottom" timestamp="1609626398899">
       <screen x="0" y="23" width="1680" height="976" />
     </state>
@@ -99,5 +125,9 @@
     </state>
     <state width="1659" height="255" key="GridCell.Tab.0.right/0.23.1680.976@0.23.1680.976" timestamp="1609626398899" />
     <state width="1659" height="255" key="GridCell.Tab.0.right/1680.23.1920.1057/0.23.1680.976@0.23.1680.976" timestamp="1609598940868" />
+    <state x="440" y="239" key="Vcs.Push.Dialog.v2" timestamp="1609787691518">
+      <screen x="0" y="23" width="1680" height="976" />
+    </state>
+    <state x="440" y="239" key="Vcs.Push.Dialog.v2/1680.23.1920.1057/0.23.1680.976@0.23.1680.976" timestamp="1609787691518" />
   </component>
 </project>
