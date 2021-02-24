@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="35c283ce-8891-4ee1-81ac-c825bba4d491" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Navbar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/actions/ticketActions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/actions/types.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Ticket/TicketItem.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reducers/errorsReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reducers/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reducers/ticketReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/TicketsBoard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TicketsBoard.js" afterDir="false" />
     </list>
@@ -73,7 +80,10 @@
       <option name="presentableId" value="Default" />
       <updated>1609598686365</updated>
       <workItem from="1609598688121" duration="1708000" />
-      <workItem from="1609787211979" duration="3414000" />
+      <workItem from="1609787211979" duration="4000000" />
+      <workItem from="1613839538959" duration="1120000" />
+      <workItem from="1614011566156" duration="3155000" />
+      <workItem from="1614184335911" duration="3164000" />
     </task>
     <task id="LOCAL-00001" summary="Tickets task start">
       <created>1609787675059</created>
@@ -82,7 +92,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609787675059</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Tickets task start one">
+      <created>1609791048166</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1609791048166</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -90,17 +107,18 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Tickets task start" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tickets task start" />
+    <MESSAGE value="Tickets task start one" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tickets task start one" />
   </component>
   <component name="WindowStateProjectService">
     <state x="439" y="176" key="#Deployment" timestamp="1609787639318">
       <screen x="0" y="23" width="1680" height="976" />
     </state>
     <state x="439" y="176" key="#Deployment/1680.23.1920.1057/0.23.1680.976@0.23.1680.976" timestamp="1609787639318" />
-    <state x="423" y="113" key="CommitChangelistDialog2" timestamp="1609787674870">
+    <state x="423" y="113" key="CommitChangelistDialog2" timestamp="1609791048030">
       <screen x="0" y="23" width="1680" height="976" />
     </state>
-    <state x="423" y="113" key="CommitChangelistDialog2/1680.23.1920.1057/0.23.1680.976@0.23.1680.976" timestamp="1609787674870" />
+    <state x="423" y="113" key="CommitChangelistDialog2/1680.23.1920.1057/0.23.1680.976@0.23.1680.976" timestamp="1609791048030" />
     <state x="705" y="411" key="Github.ShareDialog" timestamp="1609787838040">
       <screen x="0" y="23" width="1680" height="976" />
     </state>
@@ -125,9 +143,9 @@
     </state>
     <state width="1659" height="255" key="GridCell.Tab.0.right/0.23.1680.976@0.23.1680.976" timestamp="1609626398899" />
     <state width="1659" height="255" key="GridCell.Tab.0.right/1680.23.1920.1057/0.23.1680.976@0.23.1680.976" timestamp="1609598940868" />
-    <state x="440" y="239" key="Vcs.Push.Dialog.v2" timestamp="1609787691518">
+    <state x="440" y="239" key="Vcs.Push.Dialog.v2" timestamp="1609791049901">
       <screen x="0" y="23" width="1680" height="976" />
     </state>
-    <state x="440" y="239" key="Vcs.Push.Dialog.v2/1680.23.1920.1057/0.23.1680.976@0.23.1680.976" timestamp="1609787691518" />
+    <state x="440" y="239" key="Vcs.Push.Dialog.v2/1680.23.1920.1057/0.23.1680.976@0.23.1680.976" timestamp="1609791049901" />
   </component>
 </project>

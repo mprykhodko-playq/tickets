@@ -1,7 +1,15 @@
 import React, {Component} from 'react';
 import Link from "react-router-dom";
+import TicketItem from "./Ticket/TicketItem";
+import {connect} from "react-redux";
+import PropTypes from "prop-types";
+import {getBacklog} from "../actions/ticketActions";
+
 
 class TicketsBoard extends Component {
+    componentDidMount() {
+        this.props.getBacklog();
+    }
     render() {
         return (
             <div className="container">
@@ -21,20 +29,7 @@ class TicketsBoard extends Component {
                             {
                                 // <!-- SAMPLE PROJECT TASK STARTS HERE -->
                             }{" "}
-                            <div className="card mb-1 bg-light">
-                                <div className="card-header text-primary">
-                                    ID: projectSequence
-                                </div>
-                                <div className="card-body bg-light">
-                                    <h5 className="card-title">summary</h5>
-                                    <p className="card-text text-truncate ">acceptanceCriteria</p>
-                                    <a href="" className="btn btn-primary">
-                                        View / Update
-                                    </a>
-
-                                    <button className="btn btn-danger ml-4">Delete</button>
-                                </div>
-                            </div>
+                            <TicketItem/>
                             {
                                 // <!-- SAMPLE PROJECT TASK ENDS HERE -->
                             }{" "}
@@ -49,4 +44,13 @@ class TicketsBoard extends Component {
     }
 }
 
-export default TicketsBoard;
+TicketsBoard.propTypes = {
+    getBacklog: PropTypes.func.isRequired,
+    tickets: PropTypes.object.isRequired
+};
+
+const mapStateToProps = state => ({
+   tickets: state.ticket
+});
+
+export default connect(mapStateToProps, {getBacklog}) (TicketsBoard);
