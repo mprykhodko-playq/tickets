@@ -11,6 +11,28 @@ class TicketsBoard extends Component {
         this.props.getBacklog();
     }
     render() {
+
+        const {tickets} = this.props.tickets;
+
+        let TicketContent;
+        let items = [];
+
+        const TicketAlgorithm = tickets => {
+            if (tickets.length < 1) {
+                return(
+                    <div className="alert alert-info text-center" role="alert">
+                        No tickets
+                    </div>
+                )
+            } else {
+                for (let i = 0; i < tickets.length; i++){
+                    items.push(<TicketItem key={i} ticket={tickets[i]}/>)
+                }
+            }
+        };
+
+        TicketAlgorithm(tickets);
+
         return (
             <div className="container">
                 <a href="/addProjectTask" className="btn btn-primary mb-3">
@@ -29,7 +51,6 @@ class TicketsBoard extends Component {
                             {
                                 // <!-- SAMPLE PROJECT TASK STARTS HERE -->
                             }{" "}
-                            <TicketItem/>
                             {
                                 // <!-- SAMPLE PROJECT TASK ENDS HERE -->
                             }{" "}
@@ -39,6 +60,7 @@ class TicketsBoard extends Component {
                 {
                     //<!-- Backlog ENDS HERE -->
                 }{" "}
+                {items}
             </div>
         );
     }

@@ -7,9 +7,10 @@ export const addTicket = (ticket, history) => async dispatch => {
 };
 
 export const getBacklog = () => async dispatch => {
-    const res = await axios.get("https://front-test.beta.aviasales.ru/tickets?searchId=3ppy2");
+    const keyResp = await axios.get("https://front-test.beta.aviasales.ru/search");
+    const res = await axios.get(`https://front-test.beta.aviasales.ru/tickets?searchId=${keyResp.data.searchId}`);
     dispatch({
         type: GET_TICKETS,
-        payload: res.data
+        payload: res.data.tickets
     })
-}
+};

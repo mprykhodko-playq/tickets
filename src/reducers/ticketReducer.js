@@ -1,8 +1,8 @@
 import {GET_TICKETS} from "../actions/types";
 
 const initialState = {
-    tickets: [],
-    stop: {}
+    tickets: []
+    // stop: {}
 };
 
 export default function (state=initialState, action) {
