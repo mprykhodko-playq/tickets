@@ -3,9 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="35c283ce-8891-4ee1-81ac-c825bba4d491" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/ticketActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/ticketActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Ticket/TicketItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Ticket/TicketItem.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/TicketsBoard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TicketsBoard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/ticketReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/ticketReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +78,9 @@
       <workItem from="1613839538959" duration="1120000" />
       <workItem from="1614011566156" duration="3155000" />
       <workItem from="1614184335911" duration="3929000" />
-      <workItem from="1614341312598" duration="4503000" />
+      <workItem from="1614341312598" duration="10431000" />
+      <workItem from="1614432369247" duration="10092000" />
+      <workItem from="1614607421922" duration="1007000" />
     </task>
     <task id="LOCAL-00001" summary="Tickets task start">
       <created>1609787675059</created>
@@ -100,7 +103,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614187968533</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="get tickets from store">
+      <created>1614348929969</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1614348929969</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,46 +120,51 @@
     <MESSAGE value="Tickets task start" />
     <MESSAGE value="Tickets task start one" />
     <MESSAGE value="get tickets from base" />
-    <option name="LAST_COMMIT_MESSAGE" value="get tickets from base" />
+    <MESSAGE value="get tickets from store" />
+    <option name="LAST_COMMIT_MESSAGE" value="get tickets from store" />
   </component>
   <component name="WindowStateProjectService">
     <state x="439" y="176" key="#Deployment" timestamp="1609787639318">
       <screen x="0" y="23" width="1680" height="976" />
     </state>
     <state x="439" y="176" key="#Deployment/1680.23.1920.1057/0.23.1680.976@0.23.1680.976" timestamp="1609787639318" />
-    <state x="423" y="113" key="CommitChangelistDialog2" timestamp="1614187968370">
+    <state x="515" y="321" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1614350220604">
       <screen x="0" y="23" width="1680" height="976" />
     </state>
-    <state x="423" y="113" key="CommitChangelistDialog2/0.23.1680.976/1680.23.1920.1057@0.23.1680.976" timestamp="1614187968370" />
+    <state x="515" y="321" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1680.976/1680.23.1920.1057@0.23.1680.976" timestamp="1614350220604" />
+    <state x="423" y="113" key="CommitChangelistDialog2" timestamp="1614348929814">
+      <screen x="0" y="23" width="1680" height="976" />
+    </state>
+    <state x="423" y="113" key="CommitChangelistDialog2/0.23.1680.976/1680.23.1920.1057@0.23.1680.976" timestamp="1614348929814" />
     <state x="423" y="113" key="CommitChangelistDialog2/1680.23.1920.1057/0.23.1680.976@0.23.1680.976" timestamp="1609791048030" />
     <state x="705" y="411" key="Github.ShareDialog" timestamp="1609787838040">
       <screen x="0" y="23" width="1680" height="976" />
     </state>
     <state x="705" y="411" key="Github.ShareDialog/1680.23.1920.1057/0.23.1680.976@0.23.1680.976" timestamp="1609787838040" />
-    <state width="1659" height="255" key="GridCell.Tab.0.bottom" timestamp="1609626398899">
+    <state width="1659" height="255" key="GridCell.Tab.0.bottom" timestamp="1614461362617">
       <screen x="0" y="23" width="1680" height="976" />
     </state>
-    <state width="1659" height="255" key="GridCell.Tab.0.bottom/0.23.1680.976@0.23.1680.976" timestamp="1609626398899" />
-    <state width="1659" height="255" key="GridCell.Tab.0.bottom/1680.23.1920.1057/0.23.1680.976@0.23.1680.976" timestamp="1609598940869" />
-    <state width="1659" height="255" key="GridCell.Tab.0.center" timestamp="1609626398899">
+    <state width="1659" height="255" key="GridCell.Tab.0.bottom/0.23.1680.976@0.23.1680.976" timestamp="1614461362617" />
+    <state width="1659" height="255" key="GridCell.Tab.0.bottom/1680.23.1920.1057/0.23.1680.976@0.23.1680.976" timestamp="1614439991041" />
+    <state width="1659" height="255" key="GridCell.Tab.0.center" timestamp="1614461362616">
       <screen x="0" y="23" width="1680" height="976" />
     </state>
-    <state width="1659" height="255" key="GridCell.Tab.0.center/0.23.1680.976@0.23.1680.976" timestamp="1609626398899" />
-    <state width="1659" height="255" key="GridCell.Tab.0.center/1680.23.1920.1057/0.23.1680.976@0.23.1680.976" timestamp="1609598940868" />
-    <state width="1659" height="255" key="GridCell.Tab.0.left" timestamp="1609626398898">
+    <state width="1659" height="255" key="GridCell.Tab.0.center/0.23.1680.976@0.23.1680.976" timestamp="1614461362616" />
+    <state width="1659" height="255" key="GridCell.Tab.0.center/1680.23.1920.1057/0.23.1680.976@0.23.1680.976" timestamp="1614439991040" />
+    <state width="1659" height="255" key="GridCell.Tab.0.left" timestamp="1614461362616">
       <screen x="0" y="23" width="1680" height="976" />
     </state>
-    <state width="1659" height="255" key="GridCell.Tab.0.left/0.23.1680.976@0.23.1680.976" timestamp="1609626398898" />
-    <state width="1659" height="255" key="GridCell.Tab.0.left/1680.23.1920.1057/0.23.1680.976@0.23.1680.976" timestamp="1609598940867" />
-    <state width="1659" height="255" key="GridCell.Tab.0.right" timestamp="1609626398899">
+    <state width="1659" height="255" key="GridCell.Tab.0.left/0.23.1680.976@0.23.1680.976" timestamp="1614461362616" />
+    <state width="1659" height="255" key="GridCell.Tab.0.left/1680.23.1920.1057/0.23.1680.976@0.23.1680.976" timestamp="1614439991039" />
+    <state width="1659" height="255" key="GridCell.Tab.0.right" timestamp="1614461362617">
       <screen x="0" y="23" width="1680" height="976" />
     </state>
-    <state width="1659" height="255" key="GridCell.Tab.0.right/0.23.1680.976@0.23.1680.976" timestamp="1609626398899" />
-    <state width="1659" height="255" key="GridCell.Tab.0.right/1680.23.1920.1057/0.23.1680.976@0.23.1680.976" timestamp="1609598940868" />
-    <state x="440" y="239" key="Vcs.Push.Dialog.v2" timestamp="1614187973246">
+    <state width="1659" height="255" key="GridCell.Tab.0.right/0.23.1680.976@0.23.1680.976" timestamp="1614461362617" />
+    <state width="1659" height="255" key="GridCell.Tab.0.right/1680.23.1920.1057/0.23.1680.976@0.23.1680.976" timestamp="1614439991040" />
+    <state x="440" y="239" key="Vcs.Push.Dialog.v2" timestamp="1614348932368">
       <screen x="0" y="23" width="1680" height="976" />
     </state>
-    <state x="440" y="239" key="Vcs.Push.Dialog.v2/0.23.1680.976/1680.23.1920.1057@0.23.1680.976" timestamp="1614187973246" />
+    <state x="440" y="239" key="Vcs.Push.Dialog.v2/0.23.1680.976/1680.23.1920.1057@0.23.1680.976" timestamp="1614348932368" />
     <state x="440" y="239" key="Vcs.Push.Dialog.v2/1680.23.1920.1057/0.23.1680.976@0.23.1680.976" timestamp="1609791049901" />
   </component>
 </project>

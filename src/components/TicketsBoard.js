@@ -29,9 +29,26 @@ class TicketsBoard extends Component {
                     items.push(<TicketItem key={i} ticket={tickets[i]}/>)
                 }
             }
+
+            return (
+                <React.Fragment>
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-md-7">
+                                <div className="card text-center mb-2">
+                                    <div className="card-header bg-secondary text-white">
+                                        <h3>TO DO</h3>
+                                    </div>
+                                </div>
+                                {items}
+                            </div>
+                        </div>
+                    </div>
+                </React.Fragment>
+            )
         };
 
-        TicketAlgorithm(tickets);
+        TicketContent = TicketAlgorithm(tickets);
 
         return (
             <div className="container">
@@ -40,27 +57,7 @@ class TicketsBoard extends Component {
                 </a>
                 <br/>
                 <hr/>
-                <div className="container">
-                    <div className="row">
-                        <div className="col-md-7">
-                            <div className="card text-center mb-2">
-                                <div className="card-header bg-secondary text-white">
-                                    <h3>TO DO</h3>
-                                </div>
-                            </div>
-                            {
-                                // <!-- SAMPLE PROJECT TASK STARTS HERE -->
-                            }{" "}
-                            {
-                                // <!-- SAMPLE PROJECT TASK ENDS HERE -->
-                            }{" "}
-                        </div>
-                    </div>
-                </div>
-                {
-                    //<!-- Backlog ENDS HERE -->
-                }{" "}
-                {items}
+                {TicketContent}
             </div>
         );
     }
