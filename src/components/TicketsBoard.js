@@ -1,15 +1,32 @@
 import React, {Component} from 'react';
-import Link from "react-router-dom";
 import TicketItem from "./Ticket/TicketItem";
 import {connect} from "react-redux";
 import PropTypes from "prop-types";
 import {getBacklog} from "../actions/ticketActions";
+import Checkbox from "@material-ui/core/Checkbox";
+import ListItemText from "@material-ui/core/ListItemText";
 
 
 class TicketsBoard extends Component {
+
+    constructor() {
+        super();
+        this.state = {
+            all: false
+        };
+        this.onChange = this.onChange.bind(this);
+    }
+
+    onChange(e) {
+        this.setState({
+        [e.target.name]: e.target.checked
+        })
+    }
+
     componentDidMount() {
         this.props.getBacklog();
     }
+
     render() {
 
         const {tickets} = this.props.tickets;
@@ -57,6 +74,21 @@ class TicketsBoard extends Component {
                 </a>
                 <br/>
                 <hr/>
+
+                <form>
+                    <div className="card-group">
+                        <Checkbox
+                            className="text-left card-body"
+                            checked={this.state.all}
+                            name = "all"
+                            disableRipple={true}
+                            tabIndex={-1}
+                            onChange={this.onChange}
+                        />
+                        <ListItemText primary="All" className="text-left card-body"/>
+                    </div>
+                </form>
+
                 {TicketContent}
             </div>
         );
