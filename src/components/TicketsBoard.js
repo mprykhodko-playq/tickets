@@ -4,7 +4,6 @@ import {connect} from "react-redux";
 import PropTypes from "prop-types";
 import {getBacklog} from "../actions/ticketActions";
 import Checkbox from "@material-ui/core/Checkbox";
-import Button from "@material-ui/core/Button";
 import ListItemText from "@material-ui/core/ListItemText";
 
 
@@ -53,15 +52,14 @@ class TicketsBoard extends Component {
         const {tickets} = this.props.tickets;
 
         let TicketContent;
+        let sortedItems = [];
         let items = [];
-        let endItems = [];
 
         const TicketAlgorithm = tickets => {
 
             for (let i = 0; i < tickets.length; i++){
                 if (this.state.all){
-                    // items.push(<TicketItem key={i} ticket={tickets[i]}/>)
-                    endItems.push(tickets[i]);
+                    items.push(tickets[i]);
                 } else {
                     const none = this.state.none && ((tickets[i].segments[0].stops.length == 0) || (tickets[i].segments[1].stops.length == 0));
                     const one = this.state.one && ((tickets[i].segments[0].stops.length == 1) || (tickets[i].segments[1].stops.length == 1));
@@ -69,13 +67,12 @@ class TicketsBoard extends Component {
                     const three = this.state.three && ((tickets[i].segments[0].stops.length == 3) || (tickets[i].segments[0].stops.length == 3));
 
                     if (none || one || two || three){
-                        // items.push(<TicketItem key={i} ticket={tickets[i]}/>)
-                        endItems.push(tickets[i]);
+                        items.push(tickets[i]);
                     }
                 }
             }
 
-            if (endItems.length < 1){
+            if (items.length < 1){
                 return(
                     <div className="alert alert-info text-center" role="alert">
                         No tickets
@@ -84,7 +81,7 @@ class TicketsBoard extends Component {
             }
 
             if (this.state.mostCheap) {
-                endItems.sort((a, b) => {
+                items.sort((a, b) => {
                     if (a.price > b.price) {
                         return 1;
                     }
@@ -95,8 +92,20 @@ class TicketsBoard extends Component {
                 });
             }
 
-            for (let i = 0; i < endItems.length; i++){
-                items.push(<TicketItem key={i} ticket={endItems[i]}/>)
+            if (this.state.mostFast) {
+                items.sort((a,b) => {
+                    if ((a.segments[0].duration + a.segments[1].duration) > (b.segments[0].duration + b.segments[1].duration)){
+                        return 1;
+                    }
+                    if ((a.segments[0].duration + a.segments[1].duration) < (b.segments[0].duration + b.segments[1].duration)){
+                        return -1;
+                    }
+                    return 0;
+                })
+            }
+
+            for (let i = 0; i < items.length; i++){
+                sortedItems.push(<TicketItem key={i} ticket={items[i]}/>)
             }
 
             return (
@@ -114,7 +123,7 @@ class TicketsBoard extends Component {
                                         </button>
                                     </div>
                                 </div>
-                                {items}
+                                {sortedItems}
                             </div>
                         </div>
                     </div>
@@ -126,12 +135,6 @@ class TicketsBoard extends Component {
 
         return (
             <div className="container">
-                <a href="/addProjectTask" className="btn btn-primary mb-3">
-                    <i className="fas fa-plus-circle"> Create Project Task</i>
-                </a>
-                <br/>
-                <hr/>
-
                 <div className="card mb-1 bg-light col-md-4">
                     <div className="card-body bg-light">
                         <h5>Количество пересадок</h5>
@@ -192,7 +195,6 @@ class TicketsBoard extends Component {
                         </div>
                     </div>
                 </div>
-
                 {TicketContent}
             </div>
         );
