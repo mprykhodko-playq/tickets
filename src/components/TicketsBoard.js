@@ -12,23 +12,34 @@ class TicketsBoard extends Component {
     constructor() {
         super();
         this.state = {
-            all: true,
+            /*all: true,
             none: false,
             one: false,
             two: false,
-            three: false,
+            three: false,*/
+            filters: ["all", "none", "one", "two", "three"],
+            checkedValues: ["all"],
             mostCheap: false,
             mostFast: false,
         };
-        this.onChange = this.onChange.bind(this);
+        // this.onChange = this.onChange.bind(this);
         this.handleClick = this.handleClick.bind(this);
+        this.handleCheck = this.handleCheck.bind(this);
     }
 
-    onChange(e) {
+    handleCheck(e,x) {
+        this.setState(state => ({
+            checkedValues: state.checkedValues.includes(x)
+                ? state.checkedValues.filter(c => c !== x)
+                : [...state.checkedValues, x]
+        }));
+    }
+
+    /*onChange(e) {
         this.setState({
         [e.target.name]: e.target.checked
         })
-    }
+    }*/
 
     componentDidMount() {
         this.props.getBacklog();
@@ -52,19 +63,44 @@ class TicketsBoard extends Component {
         const {tickets} = this.props.tickets;
 
         let TicketContent;
+        let FilterContent;
         let sortedItems = [];
         let items = [];
+
+        const FilterAlgorithm = () => {
+
+            return(
+                <div className="card mb-1 bg-light col-md-4">
+                    <div className="card-body bg-light">
+                        <h5>Количество пересадок</h5>
+                        {this.state.filters.map(x =>
+                            <div className="card-group justify-content-center">
+                                <Checkbox
+                                    className="text-left card-body"
+                                    checked={this.state.checkedValues.includes(x)}
+                                    name = {x}
+                                    disableRipple={true}
+                                    tabIndex={-1}
+                                    onChange={e => this.handleCheck(e,x)}
+                                />
+                                <ListItemText primary={x} className="text-left card-body"/>
+                            </div>
+                        )}
+                    </div>
+                </div>
+            )
+        };
 
         const TicketAlgorithm = tickets => {
 
             for (let i = 0; i < tickets.length; i++){
-                if (this.state.all){
+                if (this.state.checkedValues.includes('all')){
                     items.push(tickets[i]);
                 } else {
-                    const none = this.state.none && ((tickets[i].segments[0].stops.length == 0) || (tickets[i].segments[1].stops.length == 0));
-                    const one = this.state.one && ((tickets[i].segments[0].stops.length == 1) || (tickets[i].segments[1].stops.length == 1));
-                    const two = this.state.two && ((tickets[i].segments[0].stops.length == 2) || (tickets[i].segments[0].stops.length == 2));
-                    const three = this.state.three && ((tickets[i].segments[0].stops.length == 3) || (tickets[i].segments[0].stops.length == 3));
+                    const none = this.state.checkedValues.includes('none') && ((tickets[i].segments[0].stops.length == 0) || (tickets[i].segments[1].stops.length == 0));
+                    const one = this.state.checkedValues.includes('one') && ((tickets[i].segments[0].stops.length == 1) || (tickets[i].segments[1].stops.length == 1));
+                    const two = this.state.checkedValues.includes('two') && ((tickets[i].segments[0].stops.length == 2) || (tickets[i].segments[0].stops.length == 2));
+                    const three = this.state.checkedValues.includes('three') && ((tickets[i].segments[0].stops.length == 3) || (tickets[i].segments[0].stops.length == 3));
 
                     if (none || one || two || three){
                         items.push(tickets[i]);
@@ -132,10 +168,11 @@ class TicketsBoard extends Component {
         };
 
         TicketContent = TicketAlgorithm(tickets);
+        FilterContent = FilterAlgorithm();
 
         return (
             <div className="container">
-                <div className="card mb-1 bg-light col-md-4">
+                {/*<div className="card mb-1 bg-light col-md-4">
                     <div className="card-body bg-light">
                         <h5>Количество пересадок</h5>
                         <div className="card-group justify-content-center">
@@ -194,7 +231,8 @@ class TicketsBoard extends Component {
                             <ListItemText primary="3 пересадки" className="text-left card-body"/>
                         </div>
                     </div>
-                </div>
+                </div>*/}
+                {FilterContent}
                 {TicketContent}
             </div>
         );
