@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="35c283ce-8891-4ee1-81ac-c825bba4d491" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/TicketFilter.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/TicketsBoard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TicketsBoard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +39,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -56,6 +58,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
@@ -100,7 +103,11 @@
       <workItem from="1615304734026" duration="7713000" />
       <workItem from="1615478888812" duration="4066000" />
       <workItem from="1615827287580" duration="2238000" />
-      <workItem from="1615905683887" duration="4620000" />
+      <workItem from="1615905683887" duration="5887000" />
+      <workItem from="1615999595943" duration="3523000" />
+      <workItem from="1616085729591" duration="1248000" />
+      <workItem from="1616239588176" duration="4106000" />
+      <workItem from="1616516163047" duration="579000" />
     </task>
     <task id="LOCAL-00001" summary="Tickets task start">
       <created>1609787675059</created>
@@ -151,7 +158,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615479994468</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="sorted table refactor">
+      <created>1615910516214</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1615910516214</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -165,7 +179,8 @@
     <MESSAGE value="add all checkBox" />
     <MESSAGE value="sort by price" />
     <MESSAGE value="sort by time" />
-    <option name="LAST_COMMIT_MESSAGE" value="sort by time" />
+    <MESSAGE value="sorted table refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="sorted table refactor" />
   </component>
   <component name="WindowStateProjectService">
     <state x="439" y="176" key="#Deployment" timestamp="1609787639318">
@@ -181,11 +196,11 @@
       <screen x="0" y="23" width="1680" height="976" />
     </state>
     <state x="515" y="321" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1680.976/1680.23.1920.1057@0.23.1680.976" timestamp="1614350220604" />
-    <state x="423" y="113" key="CommitChangelistDialog2" timestamp="1615479994325">
+    <state x="423" y="113" key="CommitChangelistDialog2" timestamp="1615910516068">
       <screen x="0" y="23" width="1680" height="976" />
     </state>
     <state x="423" y="113" key="CommitChangelistDialog2/0.23.1680.976/1680.23.1920.1057@0.23.1680.976" timestamp="1615479994325" />
-    <state x="423" y="113" key="CommitChangelistDialog2/1680.23.1920.1057/0.23.1680.976@0.23.1680.976" timestamp="1609791048030" />
+    <state x="423" y="113" key="CommitChangelistDialog2/1680.23.1920.1057/0.23.1680.976@0.23.1680.976" timestamp="1615910516068" />
     <state x="705" y="411" key="Github.ShareDialog" timestamp="1609787838040">
       <screen x="0" y="23" width="1680" height="976" />
     </state>
@@ -214,21 +229,21 @@
     <state width="1659" height="255" key="GridCell.Tab.0.right/0.23.1680.976/1680.23.1920.1057@0.23.1680.976" timestamp="1614880667047" />
     <state width="1659" height="255" key="GridCell.Tab.0.right/0.23.1680.976@0.23.1680.976" timestamp="1614461362617" />
     <state width="1659" height="255" key="GridCell.Tab.0.right/1680.23.1920.1057/0.23.1680.976@0.23.1680.976" timestamp="1614439991040" />
-    <state x="609" y="229" key="RollbackChangesDialog" timestamp="1615829298103">
+    <state x="609" y="229" key="RollbackChangesDialog" timestamp="1616003508884">
       <screen x="0" y="23" width="1680" height="976" />
     </state>
-    <state x="609" y="229" key="RollbackChangesDialog/0.23.1680.976/1680.23.1920.1057@0.23.1680.976" timestamp="1615829298103" />
+    <state x="609" y="229" key="RollbackChangesDialog/0.23.1680.976/1680.23.1920.1057@0.23.1680.976" timestamp="1616003508884" />
     <state x="609" y="229" key="RollbackChangesDialog/1680.23.1920.1057/0.23.1680.976@0.23.1680.976" timestamp="1615216393000" />
     <state x="341" y="150" key="SettingsEditor" timestamp="1615305965034">
       <screen x="0" y="23" width="1680" height="976" />
     </state>
     <state x="341" y="150" key="SettingsEditor/0.23.1680.976/1680.23.1920.1057@0.23.1680.976" timestamp="1615305965034" />
     <state x="341" y="150" key="SettingsEditor/1680.23.1920.1057/0.23.1680.976@0.23.1680.976" timestamp="1615215329349" />
-    <state x="440" y="239" key="Vcs.Push.Dialog.v2" timestamp="1615480000297">
+    <state x="440" y="239" key="Vcs.Push.Dialog.v2" timestamp="1615910518354">
       <screen x="0" y="23" width="1680" height="976" />
     </state>
     <state x="440" y="239" key="Vcs.Push.Dialog.v2/0.23.1680.976/1680.23.1920.1057@0.23.1680.976" timestamp="1615480000297" />
-    <state x="440" y="239" key="Vcs.Push.Dialog.v2/1680.23.1920.1057/0.23.1680.976@0.23.1680.976" timestamp="1609791049901" />
+    <state x="440" y="239" key="Vcs.Push.Dialog.v2/1680.23.1920.1057/0.23.1680.976@0.23.1680.976" timestamp="1615910518354" />
     <state x="498" y="268" width="683" height="486" key="find.popup" timestamp="1615214184401">
       <screen x="0" y="23" width="1680" height="976" />
     </state>
