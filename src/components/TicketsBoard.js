@@ -45,23 +45,69 @@ class TicketsBoard extends Component {
         }
     }
 
+    /*handleClick(e, tickets) {
+        if (e.target.name === 'mostCheap') {
+            return tickets.sort((a, b) => {
+                if (a.price > b.price) {
+                    return 1;
+                }
+                if (a.price < b.price) {
+                    return -1;
+                }
+                return 0;
+            });
+        }
+        if (e.target.name === 'mostFast') {
+            if (this.state.mostFast) {
+                return tickets.sort((a,b) => {
+                    if ((a.segments[0].duration + a.segments[1].duration) > (b.segments[0].duration + b.segments[1].duration)){
+                        return 1;
+                    }
+                    if ((a.segments[0].duration + a.segments[1].duration) < (b.segments[0].duration + b.segments[1].duration)){
+                        return -1;
+                    }
+                    return 0;
+                })
+            }
+        }
+    }*/
+
+    ticketsFilter(tickets, filters) {
+        if (filters.includes('all')) {
+            return tickets;
+        }
+        const result = tickets.filter(t => t.segments.find(s => {
+            if (filters.includes('none')){
+                return s.stops.length === 0;
+            }
+            if (filters.includes('one')){
+                return s.stops.length === 1;
+            }
+            if (filters.includes('two')){
+                return s.stops.length === 2;
+            }
+            if (filters.includes('three')){
+                return s.stops.length === 3;
+            }
+        }));
+        return result;
+    }
+
     ticketAlgorithm = (tickets) => {
-        // const filteredOne = tickets.filter(t => t.segments.find(s => {
-        //     console.log(s.stops.length === 1, 'segment4444');
-        //     return s.stops.length === 1;
-        // }));
-        // console.log(filteredOne, 'TicketAlgorithm22222222');
+        const filteredOne = tickets.filter(t => t.segments.find(s => {
+            return s.stops.length === 1;
+        }));
 
         let sortedItems = [];
-        let items = [];
+        // let items = [];
 
-        for (let i = 0; i < tickets.length; i++){
+        /*for (let i = 0; i < tickets.length; i++){
             if (this.state.checkedValues.includes('all')){
                 items.push(tickets[i]);
             } else {
                 const none = this.state.checkedValues.includes('none') && ((tickets[i].segments[0].stops.length == 0) || (tickets[i].segments[1].stops.length == 0));
                 const one = this.state.checkedValues.includes('one') && ((tickets[i].segments[0].stops.length == 1) || (tickets[i].segments[1].stops.length == 1));
-                // console.log(one, 'one11111111');
+                console.log(one, 'one11111111');
                 const two = this.state.checkedValues.includes('two') && ((tickets[i].segments[0].stops.length == 2) || (tickets[i].segments[0].stops.length == 2));
                 const three = this.state.checkedValues.includes('three') && ((tickets[i].segments[0].stops.length == 3) || (tickets[i].segments[0].stops.length == 3));
 
@@ -69,9 +115,11 @@ class TicketsBoard extends Component {
                     items.push(tickets[i]);
                 }
             }
-        }
+        }*/
 
-        if (items.length < 1){
+        tickets = this.ticketsFilter(tickets, this.state.checkedValues);
+
+        if (tickets.length < 1){
             return(
                 <div className="alert alert-info text-center" role="alert">
                     No tickets
@@ -80,7 +128,7 @@ class TicketsBoard extends Component {
         }
 
         if (this.state.mostCheap) {
-            items.sort((a, b) => {
+            tickets.sort((a, b) => {
                 if (a.price > b.price) {
                     return 1;
                 }
@@ -92,7 +140,7 @@ class TicketsBoard extends Component {
         }
 
         if (this.state.mostFast) {
-            items.sort((a,b) => {
+            tickets.sort((a,b) => {
                 if ((a.segments[0].duration + a.segments[1].duration) > (b.segments[0].duration + b.segments[1].duration)){
                     return 1;
                 }
@@ -103,8 +151,8 @@ class TicketsBoard extends Component {
             })
         }
 
-        for (let i = 0; i < items.length; i++){
-            sortedItems.push(<TicketItem key={i} ticket={items[i]}/>)
+        for (let i = 0; i < tickets.length; i++){
+            sortedItems.push(<TicketItem key={i} ticket={tickets[i]}/>)
         }
 
         return (

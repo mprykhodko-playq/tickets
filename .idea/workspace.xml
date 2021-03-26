@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="35c283ce-8891-4ee1-81ac-c825bba4d491" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/TicketFilter.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/TicketsBoard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TicketsBoard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +105,9 @@
       <workItem from="1615999595943" duration="3523000" />
       <workItem from="1616085729591" duration="1248000" />
       <workItem from="1616239588176" duration="4106000" />
-      <workItem from="1616516163047" duration="579000" />
+      <workItem from="1616516163047" duration="2338000" />
+      <workItem from="1616688167767" duration="6141000" />
+      <workItem from="1616766380796" duration="270000" />
     </task>
     <task id="LOCAL-00001" summary="Tickets task start">
       <created>1609787675059</created>
@@ -165,7 +165,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615910516214</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="sorted table move out">
+      <created>1616516871012</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1616516871012</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,26 +187,27 @@
     <MESSAGE value="sort by price" />
     <MESSAGE value="sort by time" />
     <MESSAGE value="sorted table refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="sorted table refactor" />
+    <MESSAGE value="sorted table move out" />
+    <option name="LAST_COMMIT_MESSAGE" value="sorted table move out" />
   </component>
   <component name="WindowStateProjectService">
     <state x="439" y="176" key="#Deployment" timestamp="1609787639318">
       <screen x="0" y="23" width="1680" height="976" />
     </state>
     <state x="439" y="176" key="#Deployment/1680.23.1920.1057/0.23.1680.976@0.23.1680.976" timestamp="1609787639318" />
-    <state x="440" y="176" key="#ESLint" timestamp="1615305533391">
+    <state x="440" y="176" key="#ESLint" timestamp="1616689676401">
       <screen x="0" y="23" width="1680" height="976" />
     </state>
-    <state x="440" y="176" key="#ESLint/0.23.1680.976/1680.23.1920.1057@0.23.1680.976" timestamp="1615305533391" />
+    <state x="440" y="176" key="#ESLint/0.23.1680.976/1680.23.1920.1057@0.23.1680.976" timestamp="1616689676401" />
     <state x="440" y="176" key="#ESLint/1680.23.1920.1057/0.23.1680.976@0.23.1680.976" timestamp="1615213849834" />
     <state x="515" y="321" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1614350220604">
       <screen x="0" y="23" width="1680" height="976" />
     </state>
     <state x="515" y="321" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1680.976/1680.23.1920.1057@0.23.1680.976" timestamp="1614350220604" />
-    <state x="423" y="113" key="CommitChangelistDialog2" timestamp="1615910516068">
+    <state x="423" y="113" key="CommitChangelistDialog2" timestamp="1616516870810">
       <screen x="0" y="23" width="1680" height="976" />
     </state>
-    <state x="423" y="113" key="CommitChangelistDialog2/0.23.1680.976/1680.23.1920.1057@0.23.1680.976" timestamp="1615479994325" />
+    <state x="423" y="113" key="CommitChangelistDialog2/0.23.1680.976/1680.23.1920.1057@0.23.1680.976" timestamp="1616516870810" />
     <state x="423" y="113" key="CommitChangelistDialog2/1680.23.1920.1057/0.23.1680.976@0.23.1680.976" timestamp="1615910516068" />
     <state x="705" y="411" key="Github.ShareDialog" timestamp="1609787838040">
       <screen x="0" y="23" width="1680" height="976" />
@@ -239,10 +247,10 @@
     </state>
     <state x="341" y="150" key="SettingsEditor/0.23.1680.976/1680.23.1920.1057@0.23.1680.976" timestamp="1615305965034" />
     <state x="341" y="150" key="SettingsEditor/1680.23.1920.1057/0.23.1680.976@0.23.1680.976" timestamp="1615215329349" />
-    <state x="440" y="239" key="Vcs.Push.Dialog.v2" timestamp="1615910518354">
+    <state x="440" y="239" key="Vcs.Push.Dialog.v2" timestamp="1616516979631">
       <screen x="0" y="23" width="1680" height="976" />
     </state>
-    <state x="440" y="239" key="Vcs.Push.Dialog.v2/0.23.1680.976/1680.23.1920.1057@0.23.1680.976" timestamp="1615480000297" />
+    <state x="440" y="239" key="Vcs.Push.Dialog.v2/0.23.1680.976/1680.23.1920.1057@0.23.1680.976" timestamp="1616516979631" />
     <state x="440" y="239" key="Vcs.Push.Dialog.v2/1680.23.1920.1057/0.23.1680.976@0.23.1680.976" timestamp="1615910518354" />
     <state x="498" y="268" width="683" height="486" key="find.popup" timestamp="1615214184401">
       <screen x="0" y="23" width="1680" height="976" />
