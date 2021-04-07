@@ -3,23 +3,21 @@ import Checkbox from "@material-ui/core/Checkbox";
 import ListItemText from "@material-ui/core/ListItemText";
 
 const TicketFilter = ({ filters, handleCheck, checkedValues }) => (
-    <div className="card mb-1 bg-light col-md-4">
-        <div className="card-body bg-light">
-            <h5>Количество пересадок</h5>
+    <div id="radio-block" className="card">
+            <h5>КОЛИЧЕСТВО ПЕРЕСАДОК</h5>
             {filters.map(filter =>
                 <div className="card-group justify-content-center">
                     <Checkbox
-                        className="text-left card-body"
+                        color = "primary"
                         checked={checkedValues.includes(filter)}
                         name = {filter}
                         disableRipple={true}
-                        tabIndex={-1}
                         onChange={e => handleCheck(e, filter)}
+                        style={{margin: 0}}
                     />
                     <ListItemText primary={filter} className="text-left card-body"/>
                 </div>
             )}
-        </div>
     </div>
 );
 

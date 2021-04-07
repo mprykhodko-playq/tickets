@@ -94,34 +94,17 @@ class TicketsBoard extends Component {
     }
 
     ticketAlgorithm = (tickets) => {
-        const filteredOne = tickets.filter(t => t.segments.find(s => {
+        /*const filteredOne = tickets.filter(t => t.segments.find(s => {
             return s.stops.length === 1;
-        }));
+        }));*/
 
         let sortedItems = [];
-        // let items = [];
-
-        /*for (let i = 0; i < tickets.length; i++){
-            if (this.state.checkedValues.includes('all')){
-                items.push(tickets[i]);
-            } else {
-                const none = this.state.checkedValues.includes('none') && ((tickets[i].segments[0].stops.length == 0) || (tickets[i].segments[1].stops.length == 0));
-                const one = this.state.checkedValues.includes('one') && ((tickets[i].segments[0].stops.length == 1) || (tickets[i].segments[1].stops.length == 1));
-                console.log(one, 'one11111111');
-                const two = this.state.checkedValues.includes('two') && ((tickets[i].segments[0].stops.length == 2) || (tickets[i].segments[0].stops.length == 2));
-                const three = this.state.checkedValues.includes('three') && ((tickets[i].segments[0].stops.length == 3) || (tickets[i].segments[0].stops.length == 3));
-
-                if (none || one || two || three){
-                    items.push(tickets[i]);
-                }
-            }
-        }*/
 
         tickets = this.ticketsFilter(tickets, this.state.checkedValues);
 
         if (tickets.length < 1){
             return(
-                <div className="alert alert-info text-center" role="alert">
+                <div className="alert alert-info text-center" role="alert" style={{width: "70%", float: "right"}}>
                     No tickets
                 </div>
             )
@@ -157,21 +140,15 @@ class TicketsBoard extends Component {
 
         return (
             <React.Fragment>
-                <div className="container">
-                    <div className="row">
-                        <div className="col-md-7">
-                            <div className="card text-center mb-2">
-                                <div className="card-header bg-secondary text-white">
-                                    <button className="btn btn-primary mb-3 text-left" onClick={this.handleClick} name="mostCheap">
-                                        САМЫЙ ДЕШЕВЫЙ
-                                    </button>
-                                    <button className="btn btn-primary mb-3 text-left" onClick={this.handleClick} name="mostFast">
-                                        САМЫЙ БЫСТРЫЙ
-                                    </button>
-                                </div>
-                            </div>
-                            {sortedItems}
-                        </div>
+                <div id="tickets-block">
+                    <div>
+                        <button className="btn btn-primary mb-3 text-center" onClick={this.handleClick} name="mostCheap">
+                            САМЫЙ ДЕШЕВЫЙ
+                        </button>
+                        <button className="btn btn-primary mb-3 text-center" onClick={this.handleClick} name="mostFast">
+                            САМЫЙ БЫСТРЫЙ
+                        </button>
+                        {sortedItems}
                     </div>
                 </div>
             </React.Fragment>

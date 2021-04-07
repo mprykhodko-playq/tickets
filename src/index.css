@@ -1,18 +1,38 @@
-/*body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+** {
+    margin: 0;
+    padding: 0;
+    background-color: #f3f9f9;
+    border-radius: 10px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}*/
+body, html {
+    width: 100%;
+    height: 100%;
+}
 
-/*
-* {
+#tickets-block {
+    width: 66%;
+    margin-left: 2%;
+    margin-right: 2%;
+    float: right;
+}
+
+#ticket-item {
+    border-radius: 10px;
+    padding: 30px;
+}
+
+#radio-block {
+    width: 30%;
+    padding: 30px;
+    float: left;
+}
+
+button {
+    width: 50%;
+    height: 70px;
+}
+
+/** {
     background: url("https://s1.1zoom.ru/big0/596/Evening_Forests_Mountains_Firewatch_Campo_Santo_549147_1280x720.jpg") no-repeat center;
 }*/

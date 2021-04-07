@@ -15,25 +15,21 @@ class TicketItem extends Component {
             return Math.trunc(duration/60) + 'ч ' + duration%60 + 'м'
         };
         const transCount = (trans) => {
-            if (trans.length == 0) {
-                return "ПЕРЕСАДОК НЕТ"
-            } if (trans.length == 1) {
-                return trans.length + " ПЕРЕСАДКА"
-            } else return trans.length + " ПЕРЕСАДКИ"
+            switch (trans.length) {
+                case 0: return "ПЕРЕСАДОК НЕТ";
+                case 1: return trans.length + " ПЕРЕСАДКА";
+                default: return trans.length + " ПЕРЕСАДКИ"
+            }
         };
         const transNames = (trans) => {
-            if (trans.length == 0) {
-                return '-';
-            } else {
-                return trans.toString();
-            }
+            return trans.length == 0 ? '-' : trans.toString();
         };
 
         const TicketContent = (segment) => {
             return (
                 <React.Fragment>
                     <div className="card-group">
-                        <div className="text-left card-body">
+                        <div className="card-body">
                             <div className="text-left" style={{color: "grey"}}>
                                 {segment.origin} - {segment.destination}
                             </div>
@@ -63,15 +59,13 @@ class TicketItem extends Component {
         };
 
         return (
-            <div className="card mb-1 bg-light">
-                <div className="card-body bg-light">
-                    <h4 className="card-title" style={{color: "deepskyblue"}}>
-                        {ticket.price} P
-                        <img style={{float: 'right'}} src={logoURL} alt="Logo"/>
-                    </h4>
-                    {TicketContent(ticket.segments[0])}
-                    {TicketContent(ticket.segments[1])}
-                </div>
+            <div id="ticket-item" className="card mb-1 bg-light">
+                <h4 style={{color: "deepskyblue"}} >
+                    {ticket.price} P
+                    <img style={{float: 'right'}} src={logoURL} alt="Logo"/>
+                </h4>
+                {TicketContent(ticket.segments[0])}
+                {TicketContent(ticket.segments[1])}
             </div>
         );
     }
