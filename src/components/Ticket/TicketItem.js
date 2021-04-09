@@ -28,8 +28,8 @@ class TicketItem extends Component {
         const TicketContent = (segment) => {
             return (
                 <React.Fragment>
-                    <div className="card-group">
-                        <div className="card-body">
+                    <div style={{width: '100%', position: 'relative', float:"left"}}>
+                        <div style={{width: '33%', float:"left"}}>
                             <div className="text-left" style={{color: "grey"}}>
                                 {segment.origin} - {segment.destination}
                             </div>
@@ -37,7 +37,7 @@ class TicketItem extends Component {
                                 {fromStartToEndTime(segment.date, segment.duration)}
                             </div>
                         </div>
-                        <div className="text-center card-body">
+                        <div style={{width: '33%', float:"left"}}>
                             <div className="text-left" style={{color: "grey"}}>
                                 В ПУТИ
                             </div>
@@ -45,7 +45,7 @@ class TicketItem extends Component {
                                 {flyTime(segment.duration)}
                             </div>
                         </div>
-                        <div className="text-right card-body">
+                        <div style={{width: '33%', float:"left"}}>
                             <div className="text-left" style={{color: "grey"}}>
                                 {transCount(segment.stops)}
                             </div>
@@ -59,11 +59,15 @@ class TicketItem extends Component {
         };
 
         return (
-            <div id="ticket-item" className="card mb-1 bg-light">
-                <h4 style={{color: "deepskyblue"}} >
-                    {ticket.price} P
-                    <img style={{float: 'right'}} src={logoURL} alt="Logo"/>
-                </h4>
+            <div id="ticket-item">
+                <div style={{position: "relative", marginBottom: "20px", height:"40%"}}>
+                    <h4 id="price">
+                        {ticket.price} P
+                    </h4>
+                    <div id="logo">
+                        <img src={logoURL} style={{width:"60%"}}/>
+                    </div>
+                </div>
                 {TicketContent(ticket.segments[0])}
                 {TicketContent(ticket.segments[1])}
             </div>
