@@ -28,25 +28,25 @@ class TicketItem extends Component {
         const TicketContent = (segment) => {
             return (
                 <React.Fragment>
-                    <div style={{width: '100%', position: 'relative', float:"left"}}>
-                        <div style={{width: '33%', float:"left"}}>
-                            <div className="text-left" style={{color: "grey"}}>
+                    <div id="ticket-content">
+                        <div id="ticket-content-particle">
+                            <div className="text-left" style={{color: "darkgrey"}}>
                                 {segment.origin} - {segment.destination}
                             </div>
                             <div className="text-left">
                                 {fromStartToEndTime(segment.date, segment.duration)}
                             </div>
                         </div>
-                        <div style={{width: '33%', float:"left"}}>
-                            <div className="text-left" style={{color: "grey"}}>
+                        <div id="ticket-content-particle">
+                            <div className="text-left" style={{color: "darkgrey"}}>
                                 В ПУТИ
                             </div>
                             <div className="text-left">
                                 {flyTime(segment.duration)}
                             </div>
                         </div>
-                        <div style={{width: '33%', float:"left"}}>
-                            <div className="text-left" style={{color: "grey"}}>
+                        <div id="ticket-content-particle">
+                            <div className="text-left" style={{color: "darkgrey"}}>
                                 {transCount(segment.stops)}
                             </div>
                             <div className="text-left">
@@ -60,7 +60,7 @@ class TicketItem extends Component {
 
         return (
             <div id="ticket-item">
-                <div style={{position: "relative", marginBottom: "20px", height:"40%"}}>
+                <div style={{position: "relative", height:"40%"}}>
                     <h4 id="price">
                         {ticket.price} P
                     </h4>

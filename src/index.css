@@ -1,7 +1,6 @@
-** {
+* {
     margin: 0;
     padding: 0;
-    background-color: #f3f9f9;
     border-radius: 10px;
     font-family: sans-serif;
 }
@@ -18,6 +17,19 @@ body, html {
     margin-top: -0.6em;
     position: absolute;
     top: 50%;
+}
+
+#ticket-content {
+    width: 100%;
+    height: 28%;
+    position: relative;
+    float: left;
+    marginBottom: 2%
+}
+
+#ticket-content-particle {
+    width: 33%;
+    float: left;
 }
 
 #logo {
@@ -41,7 +53,8 @@ body, html {
 #ticket-item {
     border-radius: 10px;
     border: solid 1px lightgrey ;
-    padding: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
     height: 300px;
     margin-bottom: 2%;
 }
