@@ -6,11 +6,28 @@ export const addTicket = (ticket, history) => async dispatch => {
     history.push("/");
 };
 
+const getKeys = async() => {
+    try {
+        return await axios.get("https://front-test.beta.aviasales.ru/search");
+    } catch (e) {
+        console.log(e);
+    }
+};
+
 export const getBacklog = () => async dispatch => {
-    const keyResp = await axios.get("https://front-test.beta.aviasales.ru/search");
-    const res = await axios.get(`https://front-test.beta.aviasales.ru/tickets?searchId=${keyResp.data.searchId}`);
-    dispatch({
-        type: GET_TICKETS,
-        payload: res.data.tickets
-    })
+    try {
+        const key = await getKeys();
+        if (key.data.searchId) {
+            const res = await axios.get(`https://front-test.beta.aviasales.ru/tickets?searchId=${key.data.searchId}`);
+            dispatch({
+                type: GET_TICKETS,
+                payload: res.data.tickets
+            })
+        } else console.error('searchId doesn\'t find');
+    } catch (e) {
+        dispatch({
+            type: GET_ERRORS,
+            payload: e.response.data
+        })
+    }
 };
